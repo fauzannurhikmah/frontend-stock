@@ -158,14 +158,14 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 
 ## 💰 Budget & External Tools
 
-**Currency Exchange Rate**: 1 USD = Rp 16.000
+**Currency Exchange Rate**: 1 USD = Rp 17.000
 
 ### 1️⃣ OpenAI API - $20/bulan
 
 | Item | Detail |
 |------|--------|
 | **Cost** | $20 USD |
-| **IDR Equivalent** | **Rp 320.000/bulan** |
+| **IDR Equivalent** | **Rp 340.000/bulan** |
 
 **Digunakan untuk**:
 - Broker Summary - Ringkasan analisis broker otomatis
@@ -181,7 +181,7 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 | Item | Detail |
 |------|--------|
 | **Cost** | $49 USD |
-| **IDR Equivalent** | **Rp 784.000/bulan** |
+| **IDR Equivalent** | **Rp 833.000/bulan** |
 
 **Digunakan untuk**:
 - Data Emitan Indonesia - Database saham IDX lengkap
@@ -210,11 +210,11 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 ## 💵 Total Budget Per Bulan
 
 ```
-OpenAI API        : Rp    320.000
-Sectors.app       : Rp    784.000
+OpenAI API        : Rp    340.000
+Sectors.app       : Rp    833.000
 goapi             : Rp    500.000
                     ─────────────
-TOTAL PER BULAN   : Rp  1.604.000 (~$100 USD)
+TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
 ```
 
 ---
