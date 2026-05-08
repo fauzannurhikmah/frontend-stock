@@ -156,80 +156,66 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 
 ---
 
-## Budget & External Tools
+## 💰 Budget & External Tools
 
-### 1. OpenAI API - $20/bulan
+**Currency Exchange Rate**: 1 USD = Rp 16.000
 
-**Tujuan Penggunaan:**
-- **Broker Summary**: Generate ringkasan otomatis dari analisis broker untuk setiap saham, ekstrak insight penting dari laporan analis
-- **Buy/Sell Recommendation**: Menganalisis tren historis, fundamental data, dan sentiment market untuk memberikan rekomendasi buy/sell/hold
-- **Fundamental Summary**: Membuat ringkasan komprehensif dari data fundamental (PE ratio, ROE, debt-to-equity, dll) dengan analisis mendalam
-- **News Sentiment Analysis**: Menganalisis sentiment dari berita pasar dan press release untuk prediksi price movement
-- **Screener Insights**: Interpretasi hasil screener saham dengan insights tentang mengapa saham memenuhi kriteria
-- **Data Scraping Insights**: Menganalisis data yang di-scrape dan mengekstrak informasi meaningful dari raw data
+### 1️⃣ OpenAI API - $20/bulan
 
-**Model yang Digunakan**: GPT-4o mini (cost-effective untuk batch processing)
+| Item | Detail |
+|------|--------|
+| **Cost** | $20 USD |
+| **IDR Equivalent** | **Rp 320.000/bulan** |
 
-**API Keys Required**: `OPENAI_API_KEY` di backend
-
----
-
-### 2. Sectors.app API - $49/bulan
-
-**Tujuan Penggunaan:**
-- **Data Emitan Indonesia**: Akses database lengkap saham-saham yang terdaftar di IDX (Indonesia Stock Exchange) dengan informasi perusahaan, sektor, dan sub-sektor
-- **Financial Data**: Dapatkan financial statements (laporan keuangan), quarterly/annual reports, balance sheet, income statement
-- **Shareholder Information**: Data lengkap pemegang saham utama, struktur kepemilikan, perubahan kepemilikan institusional
-- **Corporate Actions**: Informasi tentang dividend, stock split, corporate restructuring, rights offering, dll
-- **Valuation Data**: Market cap, trading volume, P/E ratio, dividend yield, dan metrics valuasi lainnya
-- **Historical Data**: Price history, fundamental metrics history untuk analysis dan backtesting
-
-**Use Case**: Primary data source untuk fundamental analysis dan screener fitur aplikasi. Menggantikan scraping manual dengan API yang lebih reliable dan structured.
-
-**API Keys Required**: `SECTORS_API_KEY` di backend
-
-**Documentation**: Lihat di https://sectors.app/docs untuk endpoint lengkap
+**Digunakan untuk**:
+- Broker Summary - Ringkasan analisis broker otomatis
+- Buy/Sell Recommendations - Rekomendasi trading berbasis AI
+- Fundamental Summary - Analisis data keuangan mendalam
+- News Sentiment Analysis - Sentiment dari berita pasar
+- Screener Insights - Penjelasan hasil screener
 
 ---
 
-### 3. goapi - Rp 500.000/bulan
+### 2️⃣ Sectors.app API - $49/bulan
 
-**Tujuan Penggunaan:**
-- **Real-time Stock Market Data**: Akses data pasar saham IDX secara real-time (harga bid/ask, volume, dll)
-- **Historical Price Data**: Candlestick data (OHLC - Open, High, Low, Close) untuk berbagai timeframe (1m, 5m, 15m, 1h, daily, weekly, monthly)
-- **Index Data**: Tracking IDX indices (IDX Composite, LQ45, IDX30, IDX80, dll) dengan real-time updates
-- **Corporate Actions Events**: Stock split, dividend distribution, rights offering, bonus shares
-- **Trading Volume & Liquidity Data**: Analisis volume trading dan likuiditas untuk setiap saham
-- **Market Statistics**: Aggregate market data untuk sentiment dan technical analysis
+| Item | Detail |
+|------|--------|
+| **Cost** | $49 USD |
+| **IDR Equivalent** | **Rp 784.000/bulan** |
 
-**Use Case**: Real-time dan historical data untuk technical analysis, charting, dan price tracking. API yang lebih cepat dan reliable dibanding direct scraping untuk data yang sering berubah.
-
-**API Keys Required**: `GOAPI_KEY` di backend
-
-**Documentation**: Lihat di https://goapi.id/docs untuk endpoint lengkap dan rate limits
+**Digunakan untuk**:
+- Data Emitan Indonesia - Database saham IDX lengkap
+- Financial Data - Laporan keuangan & financial statements
+- Shareholder Information - Struktur kepemilikan & pemegang saham
+- Corporate Actions - Dividend, stock split, rights offering
+- Valuation Data - Market cap, P/E ratio, dividend yield
 
 ---
 
-## Integration Architecture
+### 3️⃣ goapi - Rp 500.000/bulan
+
+| Item | Detail |
+|------|--------|
+| **Cost** | Rp 500.000 |
+| **IDR Equivalent** | **Rp 500.000/bulan** |
+
+**Digunakan untuk**:
+- Real-time Stock Data - Harga bid/ask, volume live IDX
+- Historical Price Data - Candlestick OHLC untuk technical analysis
+- Index Data - IDX Composite, LQ45, IDX30, IDX80
+- Market Statistics - Data untuk sentiment analysis
+
+---
+
+## 💵 Total Budget Per Bulan
 
 ```
-Frontend (Next.js)
-    ↓
-Backend (Flask)
-    ├─→ OpenAI API (untuk AI analysis)
-    ├─→ Sectors.app (untuk fundamental data & shareholder info)
-    └─→ goapi (untuk real-time market data & history)
+OpenAI API        : Rp    320.000
+Sectors.app       : Rp    784.000
+goapi             : Rp    500.000
+                    ─────────────
+TOTAL PER BULAN   : Rp  1.604.000 (~$100 USD)
 ```
-
-**Caching Strategy**:
-- **Fundamental Data** (Sectors.app): Cache 1-2 hari (berubah jarang)
-- **Real-time Data** (goapi): Cache 1-5 menit (update regular)
-- **AI Analysis Results** (OpenAI): Cache 3-7 hari (untuk same stock query)
-
-**Error Handling**:
-- Implement fallback ke cached data jika API down
-- Rate limiting client-side untuk menghindari API quota exceeded
-- Monitoring & alerts untuk API health
 
 ---
 
