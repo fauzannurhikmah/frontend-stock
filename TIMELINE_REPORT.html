@@ -22,30 +22,49 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
+            padding: 20px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+            }
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             border-bottom: 3px solid #1e40af;
             padding-bottom: 20px;
         }
 
         .header h1 {
-            font-size: 28px;
+            font-size: 24px;
             color: #1e40af;
             margin-bottom: 10px;
         }
 
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+
         .header .meta {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 15px;
             flex-wrap: wrap;
+        }
+
+        @media (min-width: 768px) {
+            .header .meta {
+                font-size: 12px;
+                gap: 30px;
+            }
         }
 
         .meta span {
@@ -55,19 +74,25 @@
         }
 
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .section h2 {
-            font-size: 20px;
+            font-size: 18px;
             color: #1e40af;
             margin-bottom: 15px;
             padding-bottom: 10px;
             border-bottom: 2px solid #ddd;
         }
 
+        @media (min-width: 768px) {
+            .section h2 {
+                font-size: 20px;
+            }
+        }
+
         .section h3 {
-            font-size: 16px;
+            font-size: 14px;
             color: #333;
             margin: 15px 0 10px 0;
             display: flex;
@@ -75,12 +100,26 @@
             gap: 8px;
         }
 
+        @media (min-width: 768px) {
+            .section h3 {
+                font-size: 16px;
+            }
+        }
+
         .service-card {
             background: #f8f9fa;
             border-left: 4px solid #1e40af;
-            padding: 15px;
+            padding: 12px;
             margin-bottom: 15px;
             border-radius: 4px;
+            font-size: 13px;
+        }
+
+        @media (min-width: 768px) {
+            .service-card {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
 
         .service-card table {
@@ -89,7 +128,13 @@
         }
 
         .service-card table tr td {
-            padding: 6px 0;
+            padding: 4px 0;
+        }
+
+        @media (min-width: 768px) {
+            .service-card table tr td {
+                padding: 6px 0;
+            }
         }
 
         .service-card table tr td:first-child {
@@ -109,9 +154,16 @@
         }
 
         .service-card li {
-            padding: 4px 0;
-            font-size: 13px;
+            padding: 2px 0;
+            font-size: 12px;
             color: #555;
+        }
+
+        @media (min-width: 768px) {
+            .service-card li {
+                padding: 4px 0;
+                font-size: 13px;
+            }
         }
 
         .service-card li:before {
@@ -121,72 +173,83 @@
             margin-right: 5px;
         }
 
-        .budget-summary {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .budget-summary .label {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 5px;
-        }
-
-        .budget-summary .amount {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .budget-summary .detail {
-            font-size: 12px;
-            opacity: 0.8;
-        }
-
         .budget-breakdown {
             background: #f8f9fa;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             margin: 15px 0;
             font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+
+        @media (min-width: 768px) {
+            .budget-breakdown {
+                padding: 20px;
+                font-size: 14px;
+            }
         }
 
         .budget-breakdown div {
             display: flex;
             justify-content: space-between;
-            padding: 6px 0;
-            font-size: 14px;
+            padding: 4px 0;
+        }
+
+        @media (min-width: 768px) {
+            .budget-breakdown div {
+                padding: 6px 0;
+            }
         }
 
         .budget-breakdown .label {
             flex: 1;
+            min-width: 150px;
         }
 
         .budget-breakdown .amount {
             font-weight: bold;
             color: #1e40af;
+            text-align: right;
+            margin-left: 10px;
         }
 
         .budget-breakdown .divider {
             border-top: 2px solid #1e40af;
-            margin: 8px 0;
+            margin: 6px 0;
+        }
+
+        @media (min-width: 768px) {
+            .budget-breakdown .divider {
+                margin: 8px 0;
+            }
         }
 
         .budget-breakdown .total {
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
             color: #1e40af;
-            padding: 10px 0;
+            padding: 8px 0;
+        }
+
+        @media (min-width: 768px) {
+            .budget-breakdown .total {
+                font-size: 16px;
+                padding: 10px 0;
+            }
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
+            font-size: 12px;
+        }
+
+        @media (min-width: 768px) {
+            table {
+                font-size: 14px;
+            }
         }
 
         table thead {
@@ -195,14 +258,26 @@
         }
 
         table th {
-            padding: 12px;
+            padding: 8px;
             text-align: left;
             font-weight: 600;
         }
 
+        @media (min-width: 768px) {
+            table th {
+                padding: 12px;
+            }
+        }
+
         table td {
-            padding: 10px 12px;
+            padding: 6px 8px;
             border-bottom: 1px solid #ddd;
+        }
+
+        @media (min-width: 768px) {
+            table td {
+                padding: 10px 12px;
+            }
         }
 
         table tbody tr:nth-child(even) {
@@ -216,9 +291,17 @@
         .roi-box {
             background: #f0fdf4;
             border-left: 4px solid #22c55e;
-            padding: 15px;
+            padding: 12px;
             margin: 10px 0;
             border-radius: 4px;
+            font-size: 13px;
+        }
+
+        @media (min-width: 768px) {
+            .roi-box {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
 
         .roi-box strong {
@@ -228,50 +311,119 @@
         .phase-card {
             background: #f0f4ff;
             border-left: 4px solid #1e40af;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 12px;
+            margin-bottom: 12px;
             border-radius: 4px;
+            font-size: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .phase-card {
+                padding: 15px;
+                margin-bottom: 15px;
+                font-size: 13px;
+            }
         }
 
         .phase-card h4 {
             color: #1e40af;
-            margin-bottom: 10px;
-            font-size: 15px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        @media (min-width: 768px) {
+            .phase-card h4 {
+                font-size: 15px;
+            }
         }
 
         .phase-card .details {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 13px;
+            gap: 8px;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .phase-card .details {
+                gap: 10px;
+                font-size: 13px;
+            }
         }
 
         .phase-card .detail-item {
             display: flex;
             gap: 5px;
+            flex-wrap: wrap;
         }
 
         .phase-card .detail-item strong {
             color: #1e40af;
-            min-width: 80px;
+            min-width: 50px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 11px;
+            color: #555;
+        }
+
+        @media (min-width: 768px) {
+            .task-list {
+                font-size: 13px;
+            }
+        }
+
+        .task-list li {
+            padding: 3px 0;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .task-list li {
+                padding: 4px 0;
+                padding-left: 20px;
+            }
+        }
+
+        .task-list li:before {
+            content: "□ ";
+            position: absolute;
+            left: 0;
+            color: #1e40af;
         }
 
         .checklist {
             list-style: none;
             padding: 0;
+            font-size: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .checklist {
+                font-size: 14px;
+            }
         }
 
         .checklist li {
-            padding: 8px 0;
+            padding: 6px 0;
             display: flex;
             align-items: center;
-            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            .checklist li {
+                padding: 8px 0;
+            }
         }
 
         .checklist li:before {
             content: "☐ ";
             color: #1e40af;
-            font-size: 18px;
+            font-size: 16px;
             margin-right: 8px;
             font-weight: bold;
         }
@@ -279,9 +431,17 @@
         .overview-box {
             background: #f0fdf4;
             border-left: 4px solid #22c55e;
-            padding: 15px;
+            padding: 12px;
             border-radius: 4px;
             margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        @media (min-width: 768px) {
+            .overview-box {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
 
         .overview-box strong {
@@ -290,40 +450,31 @@
 
         .footer {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 15px;
             border-top: 2px solid #ddd;
-            font-size: 11px;
+            font-size: 10px;
             color: #999;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
-        .print-only {
-            display: none;
-        }
-
-        @media print {
-            body {
-                background: white;
-            }
-
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-            }
-
-            .no-break {
-                page-break-inside: avoid;
-            }
-
-            @page {
-                margin: 20mm;
+        @media (min-width: 768px) {
+            .footer {
+                font-size: 11px;
+                padding-top: 20px;
+                margin-top: 30px;
             }
         }
 
         .currency-note {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
             margin-top: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .currency-note {
+                font-size: 12px;
+            }
         }
 
         .highlight {
@@ -334,19 +485,32 @@
 
         .print-button {
             text-align: center;
-            margin: 20px 0;
+            margin: 15px 0;
             display: block;
+        }
+
+        @media (min-width: 768px) {
+            .print-button {
+                margin: 20px 0;
+            }
         }
 
         .print-button button {
             background: #1e40af;
             color: white;
             border: none;
-            padding: 10px 30px;
+            padding: 8px 20px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .print-button button {
+                padding: 10px 30px;
+                font-size: 14px;
+            }
         }
 
         .print-button button:hover {
@@ -354,79 +518,27 @@
         }
 
         @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .no-break {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                margin: 20mm;
+            }
+
             .print-button {
                 display: none;
             }
-        }
-
-        .task-list {
-            list-style: none;
-            padding-left: 0;
-            font-size: 13px;
-            color: #555;
-        }
-
-        .task-list li {
-            padding: 4px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .task-list li:before {
-            content: "□ ";
-            position: absolute;
-            left: 0;
-            color: #1e40af;
-        }
-
-        .timeline-visual {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-            position: relative;
-        }
-
-        .timeline-visual::before {
-            content: "";
-            position: absolute;
-            top: 20px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #ddd;
-        }
-
-        .timeline-item {
-            flex: 1;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .timeline-item .dot {
-            width: 40px;
-            height: 40px;
-            background: #1e40af;
-            border-radius: 50%;
-            margin: 0 auto 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 12px;
-        }
-
-        .timeline-item .label {
-            font-size: 12px;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .timeline-item .duration {
-            font-size: 11px;
-            color: #999;
-            margin-top: 5px;
         }
     </style>
 </head>
@@ -435,10 +547,10 @@
         <!-- Header -->
         <div class="header">
             <h1>📊 Budget & Timeline Report</h1>
-            <p style="color: #666; font-size: 14px; margin-top: 10px;">Migrasi Frontend HTML → Next.js + Integrasi Backend Python</p>
+            <p style="color: #666; font-size: 12px; margin-top: 10px;">Migrasi Frontend HTML → Next.js + Integrasi Backend Python</p>
             <div class="meta">
                 <span>📅 8 Mei 2026</span>
-                <span>💱 1 USD = Rp 16.000</span>
+                <span>💱 1 USD = Rp 17.000</span>
             </div>
         </div>
 
@@ -451,7 +563,7 @@
         <div class="section no-break">
             <h2>📋 Executive Summary</h2>
             <div class="overview-box">
-                <p>Proyek migrasi frontend dari HTML ke Next.js dengan integrasi backend Python (scrap-idx-fundamental) membutuhkan <span class="highlight"><strong>~8 minggu development</strong></span> dengan total biaya operasional <span class="highlight"><strong>Rp 1.604.000 per bulan</strong></span> untuk 3 external services yang terintegrasi.</p>
+                <p>Proyek migrasi frontend dari HTML ke Next.js dengan integrasi backend Python (scrap-idx-fundamental) membutuhkan <span class="highlight"><strong>~8 minggu development</strong></span> dengan total biaya operasional <span class="highlight"><strong>Rp 1.673.000 per bulan</strong></span> untuk 3 external services yang terintegrasi.</p>
             </div>
         </div>
 
@@ -561,7 +673,7 @@
             </div>
 
             <!-- Timeline Table -->
-            <table style="margin-top: 20px;">
+            <table style="margin-top: 15px;">
                 <thead>
                     <tr>
                         <th>Phase</th>
@@ -572,38 +684,37 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Phase 1: Planning & Preparation</td>
+                        <td>Phase 1</td>
                         <td>1 minggu</td>
                         <td>Week 1</td>
                         <td>Week 1</td>
                     </tr>
                     <tr>
-                        <td>Phase 2: Frontend Migration</td>
+                        <td>Phase 2</td>
                         <td>2 minggu</td>
                         <td>Week 2</td>
                         <td>Week 3</td>
                     </tr>
                     <tr>
-                        <td>Phase 3: Backend Enhancement</td>
+                        <td>Phase 3</td>
                         <td>1 minggu</td>
                         <td>Week 4</td>
                         <td>Week 4</td>
                     </tr>
                     <tr>
-                        <td>Phase 4: Frontend-Backend Integration</td>
+                        <td>Phase 4</td>
                         <td>2 minggu</td>
                         <td>Week 5</td>
                         <td>Week 6</td>
                     </tr>
                     <tr>
-                        <td>Phase 5: Testing & QA</td>
+                        <td>Phase 5</td>
                         <td>2 minggu</td>
                         <td>Week 7</td>
                         <td>Week 8</td>
                     </tr>
                     <tr style="background: #e0e7ff; font-weight: bold;">
-                        <td>TOTAL</td>
-                        <td>8 minggu</td>
+                        <td colspan="2">TOTAL</td>
                         <td colspan="2">~8 minggu development</td>
                     </tr>
                 </tbody>
@@ -615,23 +726,23 @@
             <h2>🛠️ Tech Stack</h2>
             
             <h3>Frontend</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 5px 0;">✓ Framework: <strong>Next.js 14+</strong></li>
-                <li style="padding: 5px 0;">✓ Language: <strong>TypeScript</strong></li>
-                <li style="padding: 5px 0;">✓ UI Library: <strong>React 18+</strong></li>
-                <li style="padding: 5px 0;">✓ Styling: <strong>Tailwind CSS</strong></li>
-                <li style="padding: 5px 0;">✓ State Management: <strong>React Query / SWR</strong></li>
-                <li style="padding: 5px 0;">✓ HTTP Client: <strong>Axios</strong></li>
-                <li style="padding: 5px 0;">✓ Testing: <strong>Jest + React Testing Library</strong></li>
+            <ul style="list-style: none; padding: 0; font-size: 12px;">
+                <li style="padding: 3px 0;">✓ Framework: <strong>Next.js 14+</strong></li>
+                <li style="padding: 3px 0;">✓ Language: <strong>TypeScript</strong></li>
+                <li style="padding: 3px 0;">✓ UI Library: <strong>React 18+</strong></li>
+                <li style="padding: 3px 0;">✓ Styling: <strong>Tailwind CSS</strong></li>
+                <li style="padding: 3px 0;">✓ State Management: <strong>React Query / SWR</strong></li>
+                <li style="padding: 3px 0;">✓ HTTP Client: <strong>Axios</strong></li>
+                <li style="padding: 3px 0;">✓ Testing: <strong>Jest + React Testing Library</strong></li>
             </ul>
 
-            <h3 style="margin-top: 15px;">Backend</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 5px 0;">✓ Framework: <strong>Flask</strong></li>
-                <li style="padding: 5px 0;">✓ Language: <strong>Python 3.9+</strong></li>
-                <li style="padding: 5px 0;">✓ API: <strong>REST API</strong></li>
-                <li style="padding: 5px 0;">✓ Scraping: <strong>BeautifulSoup4</strong></li>
-                <li style="padding: 5px 0;">✓ AI Integration: <strong>OpenAI API</strong></li>
+            <h3 style="margin-top: 12px;">Backend</h3>
+            <ul style="list-style: none; padding: 0; font-size: 12px;">
+                <li style="padding: 3px 0;">✓ Framework: <strong>Flask</strong></li>
+                <li style="padding: 3px 0;">✓ Language: <strong>Python 3.9+</strong></li>
+                <li style="padding: 3px 0;">✓ API: <strong>REST API</strong></li>
+                <li style="padding: 3px 0;">✓ Scraping: <strong>BeautifulSoup4</strong></li>
+                <li style="padding: 3px 0;">✓ AI Integration: <strong>OpenAI API</strong></li>
             </ul>
         </div>
 
@@ -649,14 +760,14 @@
                     </tr>
                     <tr>
                         <td>Konversi</td>
-                        <td>1 USD = Rp 16.000</td>
+                        <td>1 USD = Rp 17.000</td>
                     </tr>
                     <tr>
                         <td>Harga/Bulan</td>
-                        <td><strong style="color: #1e40af; font-size: 16px;">Rp 320.000</strong></td>
+                        <td><strong style="color: #1e40af;">Rp 340.000</strong></td>
                     </tr>
                 </table>
-                <p style="font-weight: 600; margin-bottom: 8px;">Digunakan untuk:</p>
+                <p style="font-weight: 600; margin-bottom: 6px;">Digunakan untuk:</p>
                 <ul>
                     <li>Broker Summary - Ringkasan analisis broker otomatis</li>
                     <li>Buy/Sell Recommendations - Rekomendasi trading berbasis AI</li>
@@ -676,14 +787,14 @@
                     </tr>
                     <tr>
                         <td>Konversi</td>
-                        <td>1 USD = Rp 16.000</td>
+                        <td>1 USD = Rp 17.000</td>
                     </tr>
                     <tr>
                         <td>Harga/Bulan</td>
-                        <td><strong style="color: #1e40af; font-size: 16px;">Rp 784.000</strong></td>
+                        <td><strong style="color: #1e40af;">Rp 833.000</strong></td>
                     </tr>
                 </table>
-                <p style="font-weight: 600; margin-bottom: 8px;">Digunakan untuk:</p>
+                <p style="font-weight: 600; margin-bottom: 6px;">Digunakan untuk:</p>
                 <ul>
                     <li>Data Emitan Indonesia - Database saham IDX lengkap</li>
                     <li>Financial Data - Laporan keuangan & financial statements</li>
@@ -703,10 +814,10 @@
                     </tr>
                     <tr>
                         <td>Harga/Bulan</td>
-                        <td><strong style="color: #1e40af; font-size: 16px;">Rp 500.000</strong></td>
+                        <td><strong style="color: #1e40af;">Rp 500.000</strong></td>
                     </tr>
                 </table>
-                <p style="font-weight: 600; margin-bottom: 8px;">Digunakan untuk:</p>
+                <p style="font-weight: 600; margin-bottom: 6px;">Digunakan untuk:</p>
                 <ul>
                     <li>Real-time Stock Data - Harga bid/ask, volume live IDX</li>
                     <li>Historical Price Data - Candlestick OHLC untuk technical analysis</li>
@@ -720,13 +831,13 @@
         <div class="section no-break">
             <h2>💵 Total Budget Per Bulan</h2>
             <div class="budget-breakdown">
-                <div><span class="label">OpenAI API</span> <span class="amount">Rp 320.000</span></div>
-                <div><span class="label">Sectors.app</span> <span class="amount">Rp 784.000</span></div>
+                <div><span class="label">OpenAI API</span> <span class="amount">Rp 340.000</span></div>
+                <div><span class="label">Sectors.app</span> <span class="amount">Rp 833.000</span></div>
                 <div><span class="label">goapi</span> <span class="amount">Rp 500.000</span></div>
                 <div class="divider"></div>
-                <div class="total"><span class="label">TOTAL PER BULAN</span> <span class="amount">Rp 1.604.000</span></div>
+                <div class="total"><span class="label">TOTAL PER BULAN</span> <span class="amount">Rp 1.673.000</span></div>
             </div>
-            <div class="currency-note">💡 Estimasi: ~$100 USD per bulan</div>
+            <div class="currency-note">💡 Estimasi: ~$98 USD per bulan</div>
         </div>
 
         <!-- Effort Estimation -->
@@ -756,7 +867,7 @@
         <div class="section no-break">
             <h2>✓ Approval Checklist</h2>
             <ul class="checklist">
-                <li>Budget approved: Rp 1.604.000/bulan</li>
+                <li>Budget approved: Rp 1.673.000/bulan</li>
                 <li>Timeline approved: ~8 minggu development</li>
                 <li>API vendors approved: OpenAI, Sectors.app, goapi</li>
                 <li>Team resources allocated</li>
@@ -767,13 +878,12 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>Report Generated: 8 Mei 2026 | Exchange Rate: 1 USD = Rp 16.000</p>
-            <p style="margin-top: 10px;">Project Repository: <strong>fauzannurhikmah/frontend-stock</strong></p>
+            <p>Report Generated: 8 Mei 2026 | Exchange Rate: 1 USD = Rp 17.000</p>
+            <p style="margin-top: 8px;">Project Repository: <strong>fauzannurhikmah/frontend-stock</strong></p>
         </div>
     </div>
 
     <script>
-        // Prevent accidental clicks on print button
         document.querySelector('.print-button button').addEventListener('click', function() {
             window.print();
         });
