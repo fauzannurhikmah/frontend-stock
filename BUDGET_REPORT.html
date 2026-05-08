@@ -225,6 +225,37 @@
             color: #16a34a;
         }
 
+        .phase-card {
+            background: #f0f4ff;
+            border-left: 4px solid #1e40af;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .phase-card h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .phase-card .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .phase-card .detail-item {
+            display: flex;
+            gap: 5px;
+        }
+
+        .phase-card .detail-item strong {
+            color: #1e40af;
+            min-width: 80px;
+        }
+
         .checklist {
             list-style: none;
             padding: 0;
@@ -243,6 +274,18 @@
             font-size: 18px;
             margin-right: 8px;
             font-weight: bold;
+        }
+
+        .overview-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .overview-box strong {
+            color: #16a34a;
         }
 
         .footer {
@@ -292,7 +335,7 @@
         .print-button {
             text-align: center;
             margin: 20px 0;
-            display: no-print;
+            display: block;
         }
 
         .print-button button {
@@ -315,6 +358,76 @@
                 display: none;
             }
         }
+
+        .task-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .task-list li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .task-list li:before {
+            content: "□ ";
+            position: absolute;
+            left: 0;
+            color: #1e40af;
+        }
+
+        .timeline-visual {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .timeline-visual::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #ddd;
+        }
+
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item .dot {
+            width: 40px;
+            height: 40px;
+            background: #1e40af;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .timeline-item .label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .timeline-item .duration {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -336,13 +449,195 @@
 
         <!-- Executive Summary -->
         <div class="section no-break">
-            <h2>Executive Summary</h2>
-            <p>Proyek ini membutuhkan integrasi dengan 3 layanan eksternal untuk mengoptimalkan fungsionalitas aplikasi stock market. Total biaya operasional adalah <span class="highlight"><strong>Rp 1.604.000 per bulan</strong></span>.</p>
+            <h2>📋 Executive Summary</h2>
+            <div class="overview-box">
+                <p>Proyek migrasi frontend dari HTML ke Next.js dengan integrasi backend Python (scrap-idx-fundamental) membutuhkan <span class="highlight"><strong>~8 minggu development</strong></span> dengan total biaya operasional <span class="highlight"><strong>Rp 1.604.000 per bulan</strong></span> untuk 3 external services yang terintegrasi.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT TIMELINE SECTION -->
+        <div class="section no-break">
+            <h2>⏱️ Project Timeline (8 Minggu)</h2>
+            
+            <div class="phase-card">
+                <h4>Phase 1: Planning & Preparation (1 Minggu)</h4>
+                <div class="details">
+                    <div class="detail-item">
+                        <strong>Start:</strong> <span>Week 1</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong> <span>1 minggu</span>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Audit struktur HTML saat ini di frontend-stock</li>
+                    <li>Finalisasi tech stack (Next.js, TypeScript, React Query)</li>
+                    <li>Setup repository structure untuk Next.js project</li>
+                    <li>Configure environment variables</li>
+                    <li>Setup development environment</li>
+                    <li>Dokumentasi API dari backend</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 2: Frontend Migration (2 Minggu)</h4>
+                <div class="details">
+                    <div class="detail-item">
+                        <strong>Start:</strong> <span>Week 2</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong> <span>2 minggu</span>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Initialize Next.js project dengan TypeScript</li>
+                    <li>Setup folder structure (app/, components/, lib/, hooks/, types/)</li>
+                    <li>Migrate HTML pages menjadi React components</li>
+                    <li>Setup global styles (Tailwind CSS / CSS Modules)</li>
+                    <li>Implement responsive design</li>
+                    <li>Configure routing</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 3: Backend Enhancement (1 Minggu)</h4>
+                <div class="details">
+                    <div class="detail-item">
+                        <strong>Start:</strong> <span>Week 4</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong> <span>1 minggu</span>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Review struktur Flask di scrap-idx-fundamental</li>
+                    <li>Add CORS support untuk frontend integration</li>
+                    <li>Standardize API response format</li>
+                    <li>Add request validation dengan Pydantic</li>
+                    <li>Add rate limiting untuk API endpoints</li>
+                    <li>Implement logging system</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 4: Frontend-Backend Integration (2 Minggu)</h4>
+                <div class="details">
+                    <div class="detail-item">
+                        <strong>Start:</strong> <span>Week 5</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong> <span>2 minggu</span>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Setup API client di frontend (axios/fetch wrapper)</li>
+                    <li>Implement authentication/authorization flow</li>
+                    <li>Create custom hooks untuk API calls</li>
+                    <li>Integrate form submissions ke API</li>
+                    <li>Add loading states & error handling</li>
+                    <li>Implement caching strategy (React Query / SWR)</li>
+                    <li>Add success/error notifications (toast)</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 5: Testing & Quality Assurance (2 Minggu)</h4>
+                <div class="details">
+                    <div class="detail-item">
+                        <strong>Start:</strong> <span>Week 7</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Duration:</strong> <span>2 minggu</span>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li>Frontend tests (unit, integration, E2E, performance)</li>
+                    <li>Backend tests (unit, integration, load testing)</li>
+                    <li>Manual testing semua features</li>
+                    <li>Cross-browser compatibility testing</li>
+                    <li>Security audit (XSS, CSRF, injection)</li>
+                    <li>Code review & cleanup</li>
+                </ul>
+            </div>
+
+            <!-- Timeline Table -->
+            <table style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Duration</th>
+                        <th>Start</th>
+                        <th>End</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1: Planning & Preparation</td>
+                        <td>1 minggu</td>
+                        <td>Week 1</td>
+                        <td>Week 1</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2: Frontend Migration</td>
+                        <td>2 minggu</td>
+                        <td>Week 2</td>
+                        <td>Week 3</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3: Backend Enhancement</td>
+                        <td>1 minggu</td>
+                        <td>Week 4</td>
+                        <td>Week 4</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 4: Frontend-Backend Integration</td>
+                        <td>2 minggu</td>
+                        <td>Week 5</td>
+                        <td>Week 6</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 5: Testing & QA</td>
+                        <td>2 minggu</td>
+                        <td>Week 7</td>
+                        <td>Week 8</td>
+                    </tr>
+                    <tr style="background: #e0e7ff; font-weight: bold;">
+                        <td>TOTAL</td>
+                        <td>8 minggu</td>
+                        <td colspan="2">~8 minggu development</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TECH STACK -->
+        <div class="section no-break">
+            <h2>🛠️ Tech Stack</h2>
+            
+            <h3>Frontend</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 5px 0;">✓ Framework: <strong>Next.js 14+</strong></li>
+                <li style="padding: 5px 0;">✓ Language: <strong>TypeScript</strong></li>
+                <li style="padding: 5px 0;">✓ UI Library: <strong>React 18+</strong></li>
+                <li style="padding: 5px 0;">✓ Styling: <strong>Tailwind CSS</strong></li>
+                <li style="padding: 5px 0;">✓ State Management: <strong>React Query / SWR</strong></li>
+                <li style="padding: 5px 0;">✓ HTTP Client: <strong>Axios</strong></li>
+                <li style="padding: 5px 0;">✓ Testing: <strong>Jest + React Testing Library</strong></li>
+            </ul>
+
+            <h3 style="margin-top: 15px;">Backend</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 5px 0;">✓ Framework: <strong>Flask</strong></li>
+                <li style="padding: 5px 0;">✓ Language: <strong>Python 3.9+</strong></li>
+                <li style="padding: 5px 0;">✓ API: <strong>REST API</strong></li>
+                <li style="padding: 5px 0;">✓ Scraping: <strong>BeautifulSoup4</strong></li>
+                <li style="padding: 5px 0;">✓ AI Integration: <strong>OpenAI API</strong></li>
+            </ul>
         </div>
 
         <!-- Services & Budget -->
         <div class="section no-break">
-            <h2>External Services & Budget Breakdown</h2>
+            <h2>💰 External Services & Budget</h2>
 
             <!-- Service 1: OpenAI -->
             <div class="service-card">
@@ -423,7 +718,7 @@
 
         <!-- Budget Summary -->
         <div class="section no-break">
-            <h2>💰 Total Budget Per Bulan</h2>
+            <h2>💵 Total Budget Per Bulan</h2>
             <div class="budget-breakdown">
                 <div><span class="label">OpenAI API</span> <span class="amount">Rp 320.000</span></div>
                 <div><span class="label">Sectors.app</span> <span class="amount">Rp 784.000</span></div>
@@ -434,80 +729,27 @@
             <div class="currency-note">💡 Estimasi: ~$100 USD per bulan</div>
         </div>
 
-        <!-- Project Timeline -->
+        <!-- Effort Estimation -->
         <div class="section no-break">
-            <h2>⏱️ Project Timeline</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Phase</th>
-                        <th>Duration</th>
-                        <th>Focus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Phase 1</td>
-                        <td>1 minggu</td>
-                        <td>Planning & Preparation</td>
-                    </tr>
-                    <tr>
-                        <td>Phase 2</td>
-                        <td>2 minggu</td>
-                        <td>Frontend Migration</td>
-                    </tr>
-                    <tr>
-                        <td>Phase 3</td>
-                        <td>1 minggu</td>
-                        <td>Backend Enhancement</td>
-                    </tr>
-                    <tr>
-                        <td>Phase 4</td>
-                        <td>2 minggu</td>
-                        <td>Frontend-Backend Integration</td>
-                    </tr>
-                    <tr>
-                        <td>Phase 5</td>
-                        <td>2 minggu</td>
-                        <td>Testing & QA</td>
-                    </tr>
-                    <tr style="background: #e0e7ff; font-weight: bold;">
-                        <td>TOTAL</td>
-                        <td>~8 minggu</td>
-                        <td>Complete Project</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>📊 Effort Estimation</h2>
+            <div class="roi-box">
+                <p><strong>Total Development Time:</strong> ~8 minggu</p>
+                <p style="margin-top: 5px;"><strong>Team Size:</strong> ~2 developer (1 frontend, 1 backend) atau 1 full-stack developer</p>
+                <p style="margin-top: 5px;"><strong>Working Days:</strong> ~40-50 hari</p>
+                <p style="margin-top: 5px;"><strong>Contingency:</strong> +20% (buffer untuk unexpected issues)</p>
+            </div>
         </div>
 
-        <!-- ROI & Cost Justification -->
+        <!-- Key Milestones -->
         <div class="section no-break">
-            <h2>📈 ROI & Cost Justification</h2>
-
-            <div class="roi-box">
-                <strong>OpenAI API ($20/mo = Rp 320.000)</strong>
-                <p>Minimal cost untuk AI capabilities yang powerful. GPT-4o mini optimized untuk cost-efficiency. Essential untuk value-add features seperti recommendations.</p>
-            </div>
-
-            <div class="roi-box">
-                <strong>Sectors.app ($49/mo = Rp 784.000)</strong>
-                <p>Primary data source yang reliable & structured. Menggantikan scraping manual yang tidak scalable. Comprehensive financial data coverage untuk IDX.</p>
-            </div>
-
-            <div class="roi-box">
-                <strong>goapi (Rp 500k/mo)</strong>
-                <p>Real-time market data dengan latency rendah. More reliable dari direct website scraping. Supporting charting & price tracking features.</p>
-            </div>
-
-            <div style="background: #f3e8ff; border-left: 4px solid #a855f7; padding: 15px; border-radius: 4px; margin-top: 15px;">
-                <p><strong>Combined Value: Rp 1.604.000/bulan (~$100 USD)</strong></p>
-                <ul style="list-style: none; margin-top: 10px; padding: 0;">
-                    <li style="padding: 4px 0;">✓ 3 data sources yang comprehensive</li>
-                    <li style="padding: 4px 0;">✓ AI-powered insights & recommendations</li>
-                    <li style="padding: 4px 0;">✓ Real-time + historical market data</li>
-                    <li style="padding: 4px 0;">✓ ~2-3 developer months saved dari development effort</li>
-                </ul>
-            </div>
+            <h2>✅ Key Milestones</h2>
+            <ul class="checklist">
+                <li>Phase 1 Complete → Tech stack approved</li>
+                <li>Phase 2 Complete → Frontend skeleton ready</li>
+                <li>Phase 3 Complete → Backend enhanced & documented</li>
+                <li>Phase 4 Complete → Integration complete & functional</li>
+                <li>Phase 5 Complete → Ready for production launch</li>
+            </ul>
         </div>
 
         <!-- Approval Checklist -->
