@@ -1,121 +1,183 @@
 # Project Timeline: Migrasi Frontend HTML → Next.js + Integrasi Backend Python
 
 ## Overview
-Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Python (scrap-idx-fundamental).
+Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Python (scrap-idx-fundamental) dalam **4 minggu** dengan jadwal padat yang realistis.
+
+**Timeline:** 11 Mei 2026 - 6 Juni 2026
 
 ---
 
-## Phase 1: Planning & Preparation
-**Durasi**: ~1 minggu
+## 📅 Weekly Breakdown
 
-### Tasks
-- [ ] Audit struktur HTML saat ini di `frontend-stock`
-- [ ] Finalisasi tech stack (Next.js, TypeScript, React Query, dll)
-- [ ] Setup repository structure untuk Next.js project
-- [ ] Configure environment variables (.env.local template)
-- [ ] Setup development environment (Node.js, npm/yarn)
-- [ ] Dokumentasi API dari backend (scrap-idx-fundamental)
+### **Week 1: Setup & Planning** (12-16 Mei 2026)
+**Goal:** Foundation ready, APIs documented, team aligned
 
----
+#### Monday-Tuesday: Project Kickoff & Environment Setup
+- [ ] Repository initialization & branch strategy setup
+- [ ] Development environment configuration (Node.js, npm/yarn, Python, Flask)
+- [ ] Create `.env` templates for frontend & backend
+- [ ] Setup GitHub Actions CI/CD pipeline
+- [ ] Team kickoff meeting & task distribution
 
-## Phase 2: Frontend Migration
-**Durasi**: ~2 minggu
+#### Wednesday: Next.js Boilerplate & Structure
+- [ ] Initialize Next.js 14 project with TypeScript
+- [ ] Setup folder structure (app/, components/, lib/, hooks/, types/, utils/)
+- [ ] Configure Tailwind CSS & global styles
+- [ ] Create base layout components (Header, Footer, Sidebar)
+- [ ] Setup routing structure
 
-### Tasks
-- [ ] Initialize Next.js project dengan TypeScript
-- [ ] Setup folder structure:
-  - `app/` - App Router components
-  - `components/` - Reusable React components
-  - `lib/` - Utilities & helpers
-  - `hooks/` - Custom React hooks
-  - `types/` - TypeScript interfaces
-- [ ] Migrate HTML pages menjadi React components
-- [ ] Setup global styles (Tailwind CSS / CSS Modules)
-- [ ] Implement responsive design
-- [ ] Configure routing
+#### Thursday: Backend Review & Documentation
+- [ ] API audit dari scrap-idx-fundamental
+- [ ] Document all endpoints (request/response format)
+- [ ] Identify CORS & rate limiting requirements
+- [ ] Review database schema & data models
 
-### Deliverables
-- Next.js app berjalan dengan semua halaman terintegrasi
-- Components reusable dan modular
+#### Friday: Integration Planning & Sprint Review
+- [ ] Define API contracts & response schemas (TypeScript types)
+- [ ] Create mock API responses for parallel development
+- [ ] Finalize task board for Week 2
+- [ ] Daily standup & progress review
 
----
-
-## Phase 3: Backend Enhancement
-**Durasi**: ~1 minggu
-
-### Tasks
-- [ ] Review struktur Flask di `scrap-idx-fundamental`
-- [ ] Add CORS support untuk frontend integration
-- [ ] Standardize API response format (success/error handling)
-- [ ] Add request validation dengan Pydantic
-- [ ] Enhance error messages & HTTP status codes
-- [ ] Add rate limiting untuk API endpoints
-- [ ] Implement logging system
-
-### Deliverables
-- Backend siap untuk menerima request dari frontend
-- API dokumentasi clear (Swagger/OpenAPI)
+**Week 1 Deliverables:**
+✅ Development environment fully configured
+✅ Next.js project skeleton with folder structure
+✅ API documentation & mock responses ready
+✅ Team fully onboarded
 
 ---
 
-## Phase 4: Frontend-Backend Integration
-**Durasi**: ~2 minggu
+### **Week 2: Frontend Development & Integration** (19-23 Mei 2026)
+**Goal:** Frontend functional with backend integration started
 
-### Tasks
-- [ ] Setup API client di frontend (axios/fetch wrapper)
-- [ ] Implement authentication/authorization flow
-- [ ] Create custom hooks untuk API calls:
-  - `useFundamental()` - fetch fundamental data
-  - `useStockSearch()` - search saham
-  - dll
-- [ ] Integrate form submissions ke API
-- [ ] Add loading states & error handling
-- [ ] Implement caching strategy (React Query / SWR)
-- [ ] Add success/error notifications (toast)
+#### Monday-Tuesday: Page Migration (Priority: Core Pages)
+- [ ] Migrate high-priority pages to React components
+- [ ] Implement responsive design (mobile-first)
+- [ ] Setup form components with validation
+- [ ] Create dashboard layout & main page structure
 
-### Deliverables
-- Frontend fully connected dengan backend
-- All features functional
+#### Wednesday: API Client & Hooks Development
+- [ ] Setup Axios instance with interceptors (auth, error handling)
+- [ ] Create custom hooks:
+  - [ ] `useFundamental()` - fetch fundamental data
+  - [ ] `useStockSearch()` - stock search
+  - [ ] `useBrokerSummary()` - broker analysis
+  - [ ] `useQuote()` - real-time quotes
+- [ ] Implement error boundaries & fallback UIs
 
----
+#### Thursday: Backend Integration & Testing
+- [ ] Connect pages to backend APIs
+- [ ] Setup React Query / SWR caching strategy
+- [ ] Implement loading states & skeleton screens
+- [ ] Add toast notifications (success/error messages)
+- [ ] Manual integration testing
 
-## Phase 5: Testing & Quality Assurance
-**Durasi**: ~2 minggu
+#### Friday: Bug Fixes & Sprint Planning
+- [ ] Identify & document bugs from integration testing
+- [ ] Fix critical issues
+- [ ] Code review & minor refactoring
+- [ ] Plan Week 3 testing strategy
 
-### Frontend Tests
-- [ ] Unit tests (React components)
-- [ ] Integration tests (API calls)
-- [ ] E2E tests (user workflows)
-- [ ] Performance testing & optimization
-
-### Backend Tests
-- [ ] Unit tests (scraper, API endpoints)
-- [ ] Integration tests (database, external APIs)
-- [ ] Load testing
-
-### QA
-- [ ] Manual testing semua features
-- [ ] Cross-browser compatibility testing
-- [ ] Security audit (XSS, CSRF, injection)
-- [ ] Code review & cleanup
-- [ ] Documentation finalization
-
-### Deliverables
-- Test coverage >= 80%
-- Bug tracking & fix prioritization
-- Performance baseline established
+**Week 2 Deliverables:**
+✅ All core pages migrated to React
+✅ Frontend fully connected to backend APIs
+✅ Error handling & loading states implemented
+✅ Basic manual testing completed
 
 ---
 
-## Effort Estimation
-- **Total**: ~8 minggu development
-- **Team**: ~2 developer (1 frontend, 1 backend) atau 1 full-stack
-- **Working Days**: ~40-50 hari
-- **Contingency**: +20% (buffer untuk unexpected issues)
+### **Week 3: Backend Enhancement & Testing** (26-30 Mei 2026)
+**Goal:** Quality assurance, performance baseline, stability
+
+#### Monday-Tuesday: Backend Enhancement
+- [ ] Add CORS support & security headers
+- [ ] Implement rate limiting on API endpoints
+- [ ] Add request validation (Pydantic)
+- [ ] Setup comprehensive error handling & logging
+- [ ] Add response compression & caching headers
+
+#### Tuesday-Wednesday: Frontend Testing
+- [ ] Write unit tests for React components (target: 80% coverage)
+- [ ] Integration tests for API calls
+- [ ] Test error scenarios & edge cases
+- [ ] Performance profiling & optimization
+- [ ] Fix test failures
+
+#### Wednesday-Thursday: Backend Testing
+- [ ] Unit tests for scraper functions
+- [ ] Integration tests for API endpoints
+- [ ] Load testing (simulate concurrent requests)
+- [ ] Test edge cases & error conditions
+- [ ] Fix test failures
+
+#### Thursday-Friday: End-to-End Testing & Optimization
+- [ ] E2E tests for critical user workflows
+- [ ] Cross-browser compatibility check (Chrome, Firefox, Safari, Edge)
+- [ ] Mobile responsiveness verification
+- [ ] Security audit (XSS, CSRF, injection vulnerabilities)
+- [ ] Performance baseline documentation
+
+**Week 3 Deliverables:**
+✅ Comprehensive test coverage (frontend & backend)
+✅ All tests passing with >80% coverage
+✅ Performance baseline established
+✅ Critical bugs identified & fixed
 
 ---
 
-## Tech Stack
+### **Week 4: QA, Documentation & Deployment** (2-6 Juni 2026)
+**Goal:** Production ready
+
+#### Monday-Tuesday: QA & Bug Fixes
+- [ ] Execute full regression testing
+- [ ] Cross-browser final verification
+- [ ] Security audit completion
+- [ ] Performance optimization (if needed)
+- [ ] Fix remaining bugs prioritized by severity
+
+#### Tuesday-Wednesday: Code Cleanup & Documentation
+- [ ] Code review & refactoring
+- [ ] Remove debug logs & dead code
+- [ ] Update component documentation (JSDoc/docstrings)
+- [ ] Create deployment runbook
+- [ ] API documentation (Swagger/OpenAPI)
+
+#### Wednesday-Thursday: User Acceptance Testing (UAT)
+- [ ] Prepare UAT environment
+- [ ] Execute UAT test cases
+- [ ] Document UAT results
+- [ ] Fix UAT-identified issues
+- [ ] Get stakeholder sign-off
+
+#### Thursday-Friday: Deployment & Go-Live
+- [ ] Final checklist verification
+- [ ] Production deployment (backend first, then frontend)
+- [ ] Smoke testing in production
+- [ ] Monitor logs & errors
+- [ ] Prepare support documentation
+
+**Week 4 Deliverables:**
+✅ All code reviewed & refactored
+✅ Complete documentation
+✅ UAT passed & approved
+✅ Production deployment successful
+✅ Ready for launch
+
+---
+
+## 🎯 Project Summary
+
+| Aspect | Details |
+|--------|---------|
+| **Total Duration** | 4 minggu (11 Mei - 6 Juni 2026) |
+| **Team Size** | 2 developers (1 frontend, 1 backend) |
+| **Working Days** | ~20-24 hari |
+| **Daily Commitment** | 8 jam + 15 min standup |
+| **Communication** | Daily standups 09:00-09:15 |
+| **Contingency** | +10% buffer |
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - **Framework**: Next.js 14+
@@ -125,34 +187,16 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 - **State Management**: React Query / SWR
 - **HTTP Client**: Axios
 - **Testing**: Jest + React Testing Library
+- **E2E Testing**: Playwright / Cypress
 
 ### Backend
 - **Framework**: Flask
 - **Language**: Python 3.9+
-- **Database**: (as needed)
 - **API**: REST API
 - **Scraping**: BeautifulSoup4
 - **AI Integration**: OpenAI API
-
----
-
-## Key Milestones
-1. ✅ Phase 1 Complete → Tech stack approved
-2. ✅ Phase 2 Complete → Frontend skeleton ready
-3. ✅ Phase 3 Complete → Backend enhanced & documented
-4. ✅ Phase 4 Complete → Integration complete & functional
-5. ✅ Phase 5 Complete → Ready for production launch
-
----
-
-## Risks & Mitigation
-
-| Risk | Impact | Mitigation |
-|------|--------|-----------|
-| Data migration complexity | High | Early testing & documentation |
-| API compatibility issues | Medium | Early integration testing |
-| Performance issues at scale | Medium | Load testing & optimization early |
-| Team member unavailability | Medium | Clear documentation & knowledge sharing |
+- **Validation**: Pydantic
+- **Testing**: pytest
 
 ---
 
@@ -219,9 +263,135 @@ TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
 
 ---
 
+## ✅ Key Milestones
+
+| Milestone | Target Date | Status |
+|-----------|------------|--------|
+| Week 1 Complete - Setup Done | 16 Mei 2026 | ⏳ |
+| Week 2 Complete - Integration Working | 23 Mei 2026 | ⏳ |
+| Week 3 Complete - Tests Passing | 30 Mei 2026 | ⏳ |
+| Week 4 Complete - Production Ready | 6 Juni 2026 | ⏳ |
+
+---
+
+## ⚠️ Risks & Mitigation
+
+| Risk | Probability | Impact | Mitigation |
+|------|------------|--------|-----------|
+| API integration delays | Medium | High | Use mock APIs, parallel development |
+| Scope creep | Medium | High | Strict change control, MVP focus only |
+| Testing bottleneck | Medium | Medium | Continuous testing, automated suite |
+| Team unavailability | Low | Medium | Detailed docs, pair programming |
+| Performance issues | Low | Medium | Early load testing, optimization buffer |
+
+---
+
+## 📋 Pre-Launch Checklist
+
+### Development Checklist
+- [ ] All features implemented & tested
+- [ ] Code coverage >= 80%
+- [ ] All critical bugs fixed
+- [ ] Performance optimized (load time < 3s)
+- [ ] Security audit passed
+- [ ] Cross-browser compatible
+
+### Documentation Checklist
+- [ ] API documentation complete
+- [ ] Code comments & JSDoc updated
+- [ ] Deployment runbook ready
+- [ ] Known issues documented
+- [ ] Support guide prepared
+
+### DevOps Checklist
+- [ ] CI/CD pipeline tested
+- [ ] Environment variables configured
+- [ ] Database migrations ready
+- [ ] Backup strategy in place
+- [ ] Monitoring & alerting setup
+- [ ] Rollback plan documented
+
+### Business Checklist
+- [ ] Stakeholder sign-off completed
+- [ ] UAT passed
+- [ ] Training materials ready (if needed)
+- [ ] Communication plan ready
+- [ ] Launch date confirmed
+- [ ] Support team briefed
+
+---
+
+## 📊 Effort Distribution
+
+### Frontend Developer (~40 hours/week)
+- **Week 1:** Setup (20h) + Component architecture (20h)
+- **Week 2:** Component development (32h) + Integration (8h)
+- **Week 3:** Testing & bug fixes (32h) + Optimization (8h)
+- **Week 4:** Final QA (20h) + Deployment (20h)
+
+### Backend Developer (~40 hours/week)
+- **Week 1:** API review (16h) + Enhancement planning (24h)
+- **Week 2:** Integration support (20h) + Enhancement (20h)
+- **Week 3:** Testing & optimization (32h) + Documentation (8h)
+- **Week 4:** Final testing (20h) + Deployment (20h)
+
+---
+
+## 🚀 Launch Readiness Criteria
+
+✅ **Must Have:**
+- All critical features functional
+- Zero critical bugs
+- >80% test coverage
+- API documentation complete
+- Security audit passed
+- Performance baseline met
+
+⚠️ **Should Have:**
+- Full UI polish
+- Comprehensive error messages
+- Performance optimized
+- Complete user documentation
+
+❌ **Can Be Deferred:**
+- Analytics integration
+- Advanced features
+- Comprehensive admin panel
+- Migration tools from old system
+
+---
+
+## 📞 Support & Communication
+
+- **Daily Standup:** 09:00-09:15 (15 min)
+- **Weekly Review:** Every Friday 16:00
+- **Emergency Issues:** Immediate escalation to tech lead
+- **Documentation:** Shared in GitHub Wiki
+
+---
+
 ## Next Steps
-1. Approve timeline & tech stack
-2. Setup development environment
-3. Create detailed task board (GitHub Issues/Projects)
-4. Register API keys untuk ketiga external services
-5. Start Phase 1 activities
+
+1. **Immediate (Week 1 Start):**
+   - [ ] Approve timeline & resources
+   - [ ] Confirm team members & their commitment
+   - [ ] Setup development environment
+   - [ ] Schedule kickoff meeting (12 Mei 2026)
+
+2. **Before Development Starts:**
+   - [ ] Register API keys (OpenAI, Sectors.app, goapi)
+   - [ ] Create GitHub repository & branch strategy
+   - [ ] Setup CI/CD pipeline
+   - [ ] Prepare mock data for testing
+
+3. **Ongoing:**
+   - [ ] Daily standups
+   - [ ] Weekly progress review
+   - [ ] Risk monitoring & escalation
+   - [ ] Quality metrics tracking
+
+---
+
+**Report Generated:** 11 Mei 2026  
+**Project:** fauzannurhikmah/frontend-stock  
+**Status:** Ready for approval & launch
