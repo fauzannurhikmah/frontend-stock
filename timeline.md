@@ -3,13 +3,11 @@
 ## Overview
 Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Python (scrap-idx-fundamental) dalam **4 minggu** dengan jadwal padat yang realistis.
 
-**Timeline:** 11 Mei 2026 - 6 Juni 2026
-
 ---
 
 ## 📅 Weekly Breakdown
 
-### **Week 1: Setup & Planning** (12-16 Mei 2026)
+### **Week 1: Setup & Planning**
 **Goal:** Foundation ready, APIs documented, team aligned
 
 #### Monday-Tuesday: Project Kickoff & Environment Setup
@@ -46,7 +44,7 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 
 ---
 
-### **Week 2: Frontend Development & Integration** (19-23 Mei 2026)
+### **Week 2: Frontend Development & Integration**
 **Goal:** Frontend functional with backend integration started
 
 #### Monday-Tuesday: Page Migration (Priority: Core Pages)
@@ -85,7 +83,7 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 
 ---
 
-### **Week 3: Backend Enhancement & Testing** (26-30 Mei 2026)
+### **Week 3: Backend Enhancement & Testing**
 **Goal:** Quality assurance, performance baseline, stability
 
 #### Monday-Tuesday: Backend Enhancement
@@ -124,7 +122,7 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 
 ---
 
-### **Week 4: QA, Documentation & Deployment** (2-6 Juni 2026)
+### **Week 4: QA, Documentation & Deployment**
 **Goal:** Production ready
 
 #### Monday-Tuesday: QA & Bug Fixes
@@ -168,11 +166,11 @@ Migrasi aplikasi frontend dari HTML ke Next.js dan integrasi dengan backend Pyth
 
 | Aspect | Details |
 |--------|---------|
-| **Total Duration** | 4 minggu (11 Mei - 6 Juni 2026) |
+| **Total Duration** | 4 minggu |
 | **Team Size** | 2 developers (1 frontend, 1 backend) |
 | **Working Days** | ~20-24 hari |
 | **Daily Commitment** | 8 jam + 15 min standup |
-| **Communication** | Daily standups 09:00-09:15 |
+| **Communication** | Daily standups |
 | **Contingency** | +10% buffer |
 
 ---
@@ -265,12 +263,12 @@ TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
 
 ## ✅ Key Milestones
 
-| Milestone | Target Date | Status |
-|-----------|------------|--------|
-| Week 1 Complete - Setup Done | 16 Mei 2026 | ⏳ |
-| Week 2 Complete - Integration Working | 23 Mei 2026 | ⏳ |
-| Week 3 Complete - Tests Passing | 30 Mei 2026 | ⏳ |
-| Week 4 Complete - Production Ready | 6 Juni 2026 | ⏳ |
+| Milestone | Target | Status |
+|-----------|--------|--------|
+| Week 1 Complete | Setup Done | ⏳ |
+| Week 2 Complete | Integration Working | ⏳ |
+| Week 3 Complete | Tests Passing | ⏳ |
+| Week 4 Complete | Production Ready | ⏳ |
 
 ---
 
@@ -316,7 +314,6 @@ TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
 - [ ] UAT passed
 - [ ] Training materials ready (if needed)
 - [ ] Communication plan ready
-- [ ] Launch date confirmed
 - [ ] Support team briefed
 
 ---
@@ -363,8 +360,8 @@ TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
 
 ## 📞 Support & Communication
 
-- **Daily Standup:** 09:00-09:15 (15 min)
-- **Weekly Review:** Every Friday 16:00
+- **Daily Standup:** 15 min setiap hari
+- **Weekly Review:** Setiap hari Jumat
 - **Emergency Issues:** Immediate escalation to tech lead
 - **Documentation:** Shared in GitHub Wiki
 
@@ -376,7 +373,7 @@ TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
    - [ ] Approve timeline & resources
    - [ ] Confirm team members & their commitment
    - [ ] Setup development environment
-   - [ ] Schedule kickoff meeting (12 Mei 2026)
+   - [ ] Schedule kickoff meeting
 
 2. **Before Development Starts:**
    - [ ] Register API keys (OpenAI, Sectors.app, goapi)
@@ -392,6 +389,5 @@ TOTAL PER BULAN   : Rp  1.673.000 (~$98 USD)
 
 ---
 
-**Report Generated:** 11 Mei 2026  
 **Project:** fauzannurhikmah/frontend-stock  
 **Status:** Ready for approval & launch
